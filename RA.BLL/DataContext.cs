@@ -1,7 +1,7 @@
-﻿using RecipeApp.BLL.Model;
+﻿using RA.BLL.Model;
 using System.Data.Entity;
 
-namespace RecipeApp.BLL
+namespace RA.BLL
 {
     public class DataContext: DbContext
     {

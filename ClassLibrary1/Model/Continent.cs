@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeApp.Model
+namespace RecipeApp.BLL.Model
 {
     public class Continent
     {

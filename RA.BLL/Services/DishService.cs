@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeApp.BLL
+namespace RecipeApp.BLL.Services
 {
-    public class Class1
+
+    public class DishService
     {
+        public List<Dish> H()
+        {
+
+        }
     }
 }

@@ -1,8 +1,8 @@
-﻿using RecipeApp.BLL.Model;
+﻿using RA.BLL.Model;
 using System;
 using System.Collections.Generic;
 
-namespace RecipeApp.BLL
+namespace RA.BLL.BLL
 {
     public class Dish
     {

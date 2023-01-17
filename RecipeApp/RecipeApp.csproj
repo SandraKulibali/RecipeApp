@@ -127,12 +127,6 @@
     <Resource Include="icons\dishes.jpg" />
     <Resource Include="icons\search.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\RecipeApp.BLL.csproj">
-      <Project>{35aa3b4b-8e0a-42fb-83af-cb4b9cd6cd66}</Project>
-      <Name>RecipeApp.BLL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

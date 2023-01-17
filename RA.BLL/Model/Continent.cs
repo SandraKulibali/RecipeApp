@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipeApp.BLL.Model
+namespace RA.BLL.Model
 {
-    public class Ingridient
+    public class Continent
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string ImagePath { get; set; }
+        public int DishCountryId { get; set; }
+        public DishCountry DishCountry { get; set; }
     }
 }
