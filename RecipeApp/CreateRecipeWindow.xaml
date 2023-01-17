@@ -5,50 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RecipeApp"
         mc:Ignorable="d"
-        Title="CreateRecipeWindow" Height="800" Width="400" WindowStartupLocation="CenterScreen">
+        Title="CreateRecipeWindow" MinHeight="450" MinWidth="400" Height="450" Width="400" WindowStartupLocation="CenterScreen">
     <Grid Background="AliceBlue">
 
         <!--Save recipe-->
-        <Grid x:Name="gridSave"  Visibility="Collapsed">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="200"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="170"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Введите описание</Label>
-            <RichTextBox x:Name="rtbDescription" Grid.Row="0" Grid.Column="1" Style="{StaticResource rtbStyle}">
-                <RichTextBox.Resources>
-                    <Style TargetType="{x:Type Paragraph}">
-                        <Setter Property="Margin" Value="0" />
-                    </Style>
-                </RichTextBox.Resources>
-            </RichTextBox>
-            <Label Grid.Row="1" Grid.Column="0" Height="30" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Выберите ингридиенты</Label>
-            <ComboBox x:Name="cbIngredients" Grid.Row="1" Grid.Column="1" Height="30" Style="{StaticResource cbStyle}" />
-            <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Введите инструкцию</Label>
-            <RichTextBox x:Name="rtbStepByStepDescription" Grid.Row="2" Grid.Column="1" Style="{StaticResource rtbStyle}">
-                <RichTextBox.Resources>
-                    <Style TargetType="{x:Type Paragraph}">
-                        <Setter Property="Margin" Value="0" />
-                    </Style>
-                </RichTextBox.Resources>
-            </RichTextBox>
-            <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Вставьте картинку</Label>
-            <DockPanel Grid.Row="3" Grid.Column="1">
-                <Image x:Name="imageIngredients" Height="160" Width="200" DockPanel.Dock="Top"/>
-                <Button x:Name="btnInsertImage" DockPanel.Dock="Bottom" Content="Вставить картинку" Style="{StaticResource btnInsert}"/>
-            </DockPanel>
-            <Button x:Name="btnSave" Content="Сохранить" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource btnCreate}"/>
-        </Grid>
-
+        <ScrollViewer>
+            <Grid x:Name="gridSave" Height="800" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Введите описание</Label>
+                <RichTextBox x:Name="rtbDescription" Grid.Row="0" Grid.Column="1" Style="{StaticResource rtbStyle}">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0" />
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+                <Label Grid.Row="1" Grid.Column="0" Height="30" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Выберите ингридиенты</Label>
+                <ComboBox x:Name="cbIngredients" Grid.Row="1" Grid.Column="1" Height="30" Style="{StaticResource cbStyle}" />
+                <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Введите инструкцию</Label>
+                <RichTextBox x:Name="rtbStepByStepDescription" Grid.Row="2" Grid.Column="1" Style="{StaticResource rtbStyle}">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0" />
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+                <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource labelStyle}">Вставьте картинку</Label>
+                <DockPanel Grid.Row="3" Grid.Column="1">
+                    <Image x:Name="imageIngredients" Height="160" Width="200" DockPanel.Dock="Top"/>
+                    <Button x:Name="btnInsertImage" DockPanel.Dock="Bottom" Content="Вставить картинку" Style="{StaticResource btnInsert}"/>
+                </DockPanel>
+                <Button Content="Назад" Style="{StaticResource btnCreate}" />
+                <Button x:Name="btnSave" Content="Сохранить" Grid.Row="4" Grid.Column="1" Style="{StaticResource btnCreate}"/>
+            </Grid>
+        </ScrollViewer>
+        
         <!--Create recipe-->
-        <Grid x:Name="gridCreate" Height="400" VerticalAlignment="Top">
+        <Grid x:Name="gridCreate" Height="450" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
