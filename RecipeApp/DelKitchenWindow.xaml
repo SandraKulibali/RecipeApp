@@ -1,0 +1,47 @@
+﻿<Window x:Class="RecipeApp.DelKitchenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeApp"
+        mc:Ignorable="d"
+        Title="DelKitchenWindow" Height="400" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid Background="AliceBlue">
+
+        <!--Delete kitchen-->
+        <Grid x:Name="gridDelKitchen" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Выбрать тип кухни" TextAlignment="Center" FontSize="20" FontFamily="Gabriola" />
+            <ListBox x:Name="lbTypeKitchen" Grid.Row="1" Background="AliceBlue">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button x:Name="btnDelKitchen" Content="Удалить кухню" Grid.Row="2" Style="{StaticResource btnDelKitchen}"></Button>
+        </Grid>
+
+        <!--Delete recipe-->
+        <Grid x:Name="gridDelRecipe" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Выбрать тип рецепта" TextAlignment="Center" FontSize="20" FontFamily="Gabriola" />
+            <ListBox x:Name="lbTypeRecipe" Grid.Row="1" Background="AliceBlue">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button x:Name="btnDelRecipe" Content="Удалить тип рецепта" Grid.Row="2" Style="{StaticResource btnDelKitchen}"/>
+        </Grid>
+    </Grid>
+</Window>
