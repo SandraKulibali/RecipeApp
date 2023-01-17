@@ -29,5 +29,11 @@ namespace RecipeApp
             gridSave.Visibility = Visibility.Visible;
             gridCreate.Visibility = Visibility.Collapsed;
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            gridSave.Visibility = Visibility.Collapsed;
+            gridCreate.Visibility = Visibility.Visible;
+        }
     }
 }
