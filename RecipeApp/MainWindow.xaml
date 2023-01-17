@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:RecipeApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1200">
+   
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>
