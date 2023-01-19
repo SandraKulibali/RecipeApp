@@ -41,7 +41,7 @@
                 <CheckBox Content="Вторые блюда"></CheckBox>
                 <CheckBox Content="Десерты"></CheckBox>
             </StackPanel>
-            <Button x:Name="btnDelRecipe" Content="Удалить тип рецепта" Grid.Row="2" Style="{StaticResource btnDelKitchen}" />
+            <Button x:Name="btnDelRecipe" Content="Удалить тип рецепта" Grid.Row="2" Style="{StaticResource btnDelKitchen}"/>
         </Grid>
     </Grid>
 </Window>

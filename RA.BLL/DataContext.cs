@@ -6,7 +6,7 @@ namespace RA.BLL
 {
     public class DataContext: DbContext
     {
-        public DataContext() : base("DefaultConnection")
+        public DataContext() : base("Data Source=223-12;Initial Catalog = RecipeApp;Trusted_Connection=true")
         { }
         public DbSet<Dish> Dish { get; set; }   
         public DbSet<DishCategory> dishCategories { get; set; }
