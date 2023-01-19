@@ -1,4 +1,5 @@
-﻿using RA.BLL.Model;
+﻿using RA.BLL.BLL;
+using RA.BLL.Model;
 using System.Data.Entity;
 
 namespace RA.BLL
