@@ -90,16 +90,24 @@
                     <Grid x:Name="gridPreview" Grid.Column="0" Visibility="Collapsed">
                         <StackPanel>
                             <Border Width="300" Height="200">
-                                <Image />
+                                <Image Source="icons/оливье.jpg"/>
                             </Border>
-                            <TextBlock x:Name="tbIngridients" Text="" Width="300" Height="150" FontSize="15" FontFamily="Times New Roman" />
+                            <ListBox x:Name="lbIngridients" Width="300" Height="150">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Ingridients}" FontSize="15" FontFamily="Times New Roman" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
                             <Button x:Name="btnStepByStepDescription" Click="btnStepByStepDescription_Click" Width="150" Height="80" Style="{StaticResource btnTypeRecipe}">
-                                <TextBlock Text="Пошаговое описание рецепта" TextWrapping="Wrap" />
+                                <TextBlock  Text="Пошаговое описание рецепта" TextWrapping="Wrap" />
                             </Button>
                         </StackPanel>
                     </Grid>
                     <Grid x:Name="gridDescription" Grid.Column="1" Visibility="Collapsed">
-                        <TextBlock TextWrapping="Wrap" FontSize="15" FontFamily="Times New Roman" />
+                        <TextBlock x:Name="tbDescription" TextWrapping="Wrap" FontSize="15" FontFamily="Times New Roman" />
                     </Grid>
 
                 </Grid>

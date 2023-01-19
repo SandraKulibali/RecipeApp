@@ -16,22 +16,25 @@ namespace RecipeApp
         private void btnSalad_Click(object sender, RoutedEventArgs e)
         {
             gridListRecipe.Visibility = Visibility.Visible;
-            lbRecipe.ItemsSource = new[] { new { Name = "Цезарь", Image = "icons/dishes.jpg" }, new { Name = "Оливье", Image = "icons/dishes.jpg" } };
+            lbRecipe.ItemsSource = new[] { new { Name = "Цезарь", Image = "icons/цезарь.jpg" }, new { Name = "Оливье", Image = "icons/оливье.jpg" } };
         }
 
         private void btnFirstCourse_Click(object sender, RoutedEventArgs e)
         {
             gridListRecipe.Visibility = Visibility.Visible;
+            lbRecipe.ItemsSource = new[] { new { Name = "Борщ", Image = "icons/борщ.jpg" }, new { Name = "Солянка", Image = "icons/солянка.jpg" } };
         }
 
         private void btnSecondCourse_Click(object sender, RoutedEventArgs e)
         {
             gridListRecipe.Visibility = Visibility.Visible;
+            lbRecipe.ItemsSource = new[] { new { Name = "Жаркое", Image = "icons/жаркое.jpg" }, new { Name = "Стэйк из говядины", Image = "icons/стэйк.jpg" } };
         }
 
         private void btnDessert_Click(object sender, RoutedEventArgs e)
         {
             gridListRecipe.Visibility = Visibility.Visible;
+            lbRecipe.ItemsSource = new[] { new { Name = "Чизкейк классический", Image = "icons/чизкейк.jpg" }, new { Name = "Наполеон", Image = "icons/наполеон.jpg" } };
         }
 
         private void btnOpenRecipe_Click(object sender, RoutedEventArgs e)
@@ -40,6 +43,10 @@ namespace RecipeApp
             gridDescription.Visibility = Visibility.Visible;
             gridPreview.Visibility = Visibility.Visible;
             lbRecipe.Visibility = Visibility.Collapsed;
+
+            lbIngridients.ItemsSource = new[] { new { Ingridients = "Картофель вареный (желательно не молодой, а старый) – 4 шт. средних" }, new { Ingridients = "Морковка - 1 шт." }, new { Ingridients = "Яйца сваренные вкрутую – 4 шт." }, new { Ingridients = "Колбаса вареная докторская – 300 г" }, new { Ingridients = "огурцы маринованные (можно свежие) – 4 шт. средних" }, new { Ingridients = "горошек зеленый консервированный – 1 банка весом 200 г" }, new { Ingridients = "майонез – 3-4 ст. л." }, new { Ingridients = "" }, new { Ingridients = "соль, свежемолотый черный перец" }, new { Ingridients = "листья петрушки и укропа по желанию" } };
+
+            tbDescription.Text = "Огурцы — один из ключевых ингредиентов в оливье. Без них этот салат потеряет свою изюминку. Причем использовать можно как свежие, так и соленые огурцы. Некоторые хозяйки и вовсе добавляют оба виду сразу. По их мнению, салат от этого только выигрывает. Если же вы не хотите экспериментировать, обратитесь к проверенной классике и приготовьте оливье с маринованными огурцами.";
         }
 
         private void btnDelTypeKitchen_Click(object sender, RoutedEventArgs e)
