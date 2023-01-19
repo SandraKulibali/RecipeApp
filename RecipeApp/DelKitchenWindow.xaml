@@ -16,13 +16,14 @@
                 <RowDefinition Height="40"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Text="Выбрать тип кухни" TextAlignment="Center" FontSize="20" FontFamily="Gabriola" />
-            <ListBox x:Name="lbTypeKitchen" Grid.Row="1" Background="AliceBlue">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox />
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <CheckBox Content="Китай"></CheckBox>
+                <CheckBox Content="Италия"></CheckBox>
+                <CheckBox Content="Россия"></CheckBox>
+                <CheckBox Content="Америка"></CheckBox>
+                <CheckBox Content="Германия"></CheckBox>
+                <CheckBox Content="Корея"></CheckBox>
+            </StackPanel>
             <Button x:Name="btnDelKitchen" Content="Удалить кухню" Grid.Row="2" Style="{StaticResource btnDelKitchen}"></Button>
         </Grid>
 
